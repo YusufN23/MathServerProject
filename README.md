@@ -41,7 +41,7 @@ To do that:
 
 Now your local machine should be ready to run the makefile.
 1. **Open** your Bash shell (Git Bash).  
-2. **Navigate** to the `src/` directory:
+2. **Navigate** to the `src/` directory (example shown below):
    ```bash
    cd /c/Users/User/Desktop/CS4390/CNProject/MathServerProject/src
    ```
