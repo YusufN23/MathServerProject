@@ -32,8 +32,14 @@ This repository contains:
    - **UNIX-style shell** (Linux, macOS, or Windows with Git Bash, MSYS2, or WSL) + `make`  
  
 
-## Option A: Build & Run with Makefile (Git Bash)
+## Build & Run with Makefile (Git Bash)
 
+Before running the file, you need to have the right version of make libraries installed.
+To do that:
+1. Run Powershell as an administrator.
+2. Run "choco install make -y"
+
+Now your local machine should be ready to run the makefile.
 1. **Open** your Bash shell (Git Bash).  
 2. **Navigate** to the `src/` directory:
    ```bash
