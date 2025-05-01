@@ -81,8 +81,8 @@ This repository contains:
   Result: 12
   DIV 10 5
   Result: 2
-  EXIT
-  GOODBYE Tousif
+  That's 3 responses, closing connection...
+  Client terminated.
   ```
 - **logs/client_logs.txt**  
   ```
