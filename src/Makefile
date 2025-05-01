@@ -3,7 +3,8 @@ JAVAC    := javac
 JAVA     := java
 SRC      := TCPServer.java TCPClient.java
 LOG_DIR  := logs
-CLIENT_NAME := Tousif
+CLIENT1_NAME := Tousif
+CLIENT2_NAME := Yusuf
 
 .PHONY: all compile run clean
 
@@ -23,11 +24,13 @@ run: all $(LOG_DIR)
 	@$(JAVA) TCPServer & \
 	SERVER_PID=$$!; \
 	sleep 1; \
-	echo ">> Running client operations..."; \
-	# pipe name + 3 operations into the client:
-	printf "$(CLIENT_NAME)\nADD 2 2\nMUL 3 4\nDIV 10 5\n" | $(JAVA) TCPClient; \
+	echo ">> Running first client operations..."; \
+	printf "$(CLIENT1_NAME)\nADD 2 2\nMUL 3 4\nDIV 10 5\n" | $(JAVA) TCPClient; \
+	echo ">> Running second client operations..."; \
+	printf "$(CLIENT2_NAME)\nSUB 9 4\nMUL 2 5\nADD 1 3\n" | $(JAVA) TCPClient; \
 	echo ">> Shutting down server..."; \
 	kill $$SERVER_PID
+
 
 clean:
 	rm -f *.class
